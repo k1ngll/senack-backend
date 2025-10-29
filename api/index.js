@@ -62,3 +62,5 @@ app.delete('/api/ranking', (req, res) => {
     console.log('DELETE /api/ranking - Ranking foi resetado.');
     res.status(200).json({ message: 'Ranking resetado com sucesso!' });
 });
+
+module.exports = app;
