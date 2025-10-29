@@ -52,7 +52,7 @@ function quickSort(arr, key) {
 //  Rotas da API 
 
 // Rota GET /api/ranking
-app.get('/api/ranking', async (req, res) => {
+app.get('https://senack-backend.vercel.app/api/ranking', async (req, res) => {
     try {
         await connectToDatabase();
         console.log('GET /api/ranking - Solicitado ranking...');
@@ -76,7 +76,7 @@ app.get('/api/ranking', async (req, res) => {
 });
 
 // Rota POST /api/scores
-app.post('/api/scores', async (req, res) => {
+app.post('https://senack-backend.vercel.app/api/scores', async (req, res) => {
     try {
         await connectToDatabase();
         const { name, score } = req.body;
@@ -95,7 +95,7 @@ app.post('/api/scores', async (req, res) => {
 });
 
 // Rota DELETE /api/ranking
-app.delete('/api/ranking', async (req, res) => {
+app.delete('https://senack-backend.vercel.app/api/ranking', async (req, res) => {
     try {
         await connectToDatabase();
         await Score.deleteMany({}); 
